@@ -114,8 +114,15 @@ header{
 }
 .cardBody{
     grid-column: span 6/span 6;
-    border: 1px solid #102542;
     border-radius: 20px;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.007),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.01),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.013),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.015),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.017),
+    100px 100px 80px rgba(0, 0, 0, 0.02)
+    ;
 }
 .cardBody > div > img {
     width: 100%;
@@ -135,11 +142,11 @@ header{
 }
 /* End Card */
 
-/* Our Programmer */
-.ourProgrammer{
+/* Our Doctor */
+.ourDoctors{
     margin: 60px 0;
 }
-.programmerTitle{
+.doctorTitle{
 	text-align: center;
 	font-weight: 700;
 	margin: 50px 0 40px ;
@@ -149,7 +156,7 @@ header{
 	text-align: center;
 }
 
-.listProgrammer {
+.listDoctor {
 	list-style: none;
 	padding: 0;
     display: flex;
@@ -157,13 +164,13 @@ header{
     justify-content: space-around;
     margin-bottom: 20px !important;
 }
-.imgProgrammer {
+.imgDoctor {
 	width: 150px;
 	height: 150px;
 	object-fit: cover;
     border-radius: 100%;
 }
-.programmerName {
+.doctorName {
     font-size: 18px;
 	font-weight: 700;
     margin-top: 15px;
@@ -173,12 +180,43 @@ header{
     font-size: 13px;
 }
 @media only screen and (min-width: 880px) {
-	.listProgrammer {
+	.listDoctor {
         flex-direction: row;
         margin-bottom: 0px;
     }
 }
-/* End Our Programmer */
+/* End Our Doctor */
+
+/* Slide */
+.slider-carousel {
+    padding: 45px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #cdcdcd;
+  }
+  .carousel .carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    top: 0;
+    left: 100%;
+  }
+  .carousel-item > img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .carousel .carousel-item.active {
+    left: 0;
+    transition: all 0.3s ease-out;
+  }
+  .carousel .carousel-item div {
+    height: 100%;
+  }
+/* End Slide */
 
 /* Footer */
 .footer {
@@ -190,28 +228,3 @@ header{
     font-weight: 500 !important;
 }
 /* End Footer */
-
-/* Regis Form */
-.regisSpan{
-    width: 70%;
-    margin: 0 auto;
-}
-input {
-    width: 100%;
-    border: 0.3px solid black;
-    margin-bottom: 30px;
-    border-radius: 5px;
-}
-
-input[type=text], input[type=email], input[type=number], input[type=submit] {
-    width: 100%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
-
-#submit{
-    background-color: #FFE07B;
-    cursor: pointer;
-}
-/* End Regis Form */
